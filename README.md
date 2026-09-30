@@ -327,15 +327,12 @@ La entrega contempla evidencias de:
 - Ejecución de ESLint.
 - Compilación de producción.
 
-Las capturas de pantalla y/o la demo funcional se incorporarán como parte de la entrega final.
+Las capturas de pantalla se incorporarán como parte de la entrega final.
 
-Demo
-
-[Pendiente de incorporar URL de la demo, si corresponde.]
 
 Repositorio
 
-[Pendiente de incorporar URL del repositorio GitHub.]
+https://github.com/gigidegalatea-ship-it/vue-product-showcase
 
 Autoría
 
