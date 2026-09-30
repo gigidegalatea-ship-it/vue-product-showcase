@@ -1,0 +1,62 @@
+@use "../abstracts/variables" as vars;
+
+.product-filter {
+  margin: vars.$spacing-xl 0;
+
+  padding: vars.$spacing-lg;
+
+  background-color: vars.$color-surface;
+
+  border: 1px solid vars.$color-border;
+
+  border-radius: vars.$border-radius-lg;
+
+  box-shadow: vars.$shadow-sm;
+
+  &__group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: vars.$spacing-sm;
+
+    margin-bottom: vars.$spacing-md;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+
+    padding: 0.75rem 1rem;
+
+    background-color: vars.$color-surface;
+
+    color: vars.$color-text;
+
+    border: 1px solid vars.$color-border;
+
+    border-radius: vars.$border-radius-md;
+
+    &:focus {
+      border-color: vars.$color-primary;
+
+      outline: 3px solid rgba(37, 99, 235, 0.2);
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: vars.$spacing-lg;
+
+    &__group {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.app-header {
+  background-color: vars.$color-surface;
+  border-bottom: 1px solid vars.$color-border;
+  box-shadow: vars.$shadow-sm;
+
+  &__container {
+    @include mixins.container;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    gap: vars.$spacing-lg;
+  }
+
+  &__brand {
+    color: vars.$color-primary;
+    font-size: vars.$font-size-large;
+    font-weight: 700;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: vars.$spacing-md;
+  }
+
+  &__link {
+    padding: vars.$spacing-sm;
+    color: vars.$color-text;
+    font-weight: 600;
+    border-radius: vars.$border-radius-sm;
+
+    &:hover {
+      color: vars.$color-primary;
+      background-color: vars.$color-background;
+    }
+
+    &:focus-visible {
+      outline: 3px solid vars.$color-secondary;
+      outline-offset: 2px;
+    }
+
+    &--active {
+      color: vars.$color-primary;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      padding: vars.$spacing-md 0;
+    }
+
+    &__nav {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

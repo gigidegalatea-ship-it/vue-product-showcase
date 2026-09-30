@@ -1,0 +1,77 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.product-card {
+  @include mixins.card;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: vars.$shadow-md;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background-color: vars.$color-background;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: vars.$spacing-lg;
+  }
+
+  &__category {
+    margin-bottom: vars.$spacing-sm;
+    color: vars.$color-secondary;
+    font-size: vars.$font-size-small;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: vars.$spacing-sm;
+    font-size: vars.$font-size-large;
+  }
+
+  &__description {
+    margin-bottom: vars.$spacing-lg;
+    color: vars.$color-text-light;
+  }
+
+  &__price {
+    margin-top: auto;
+    margin-bottom: vars.$spacing-md;
+    color: vars.$color-primary;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vars.$spacing-sm;
+  }
+
+  &--featured {
+    border: 2px solid vars.$color-secondary;
+  }
+
+  @media (max-width: 480px) {
+    &__body {
+      padding: vars.$spacing-md;
+    }
+
+    &__actions {
+      flex-direction: column;
+    }
+  }
+}

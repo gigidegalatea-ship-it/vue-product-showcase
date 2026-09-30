@@ -1,0 +1,42 @@
+@use "variables" as vars;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin container {
+  width: 90%;
+  max-width: vars.$container-max-width;
+  margin: 0 auto;
+}
+
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: vars.$border-radius-md;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-family: vars.$font-family-base;
+  font-size: vars.$font-size-base;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:focus-visible {
+    outline: 3px solid vars.$color-secondary;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+}
+
+@mixin card {
+  background-color: vars.$color-surface;
+  border: 1px solid vars.$color-border;
+  border-radius: vars.$border-radius-lg;
+  box-shadow: vars.$shadow-sm;
+}

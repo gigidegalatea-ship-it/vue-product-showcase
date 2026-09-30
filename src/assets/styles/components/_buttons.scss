@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.button {
+  @include mixins.button-base;
+
+  background-color: vars.$color-primary;
+  color: vars.$color-surface;
+
+  &:hover {
+    background-color: vars.$color-primary-dark;
+  }
+
+  &--secondary {
+    background-color: vars.$color-secondary;
+
+    &:hover {
+      background-color: #6d28d9;
+    }
+  }
+
+  &--danger {
+    background-color: vars.$color-danger;
+
+    &:hover {
+      background-color: #b91c1c;
+    }
+  }
+}
