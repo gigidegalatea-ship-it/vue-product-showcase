@@ -2,13 +2,13 @@ import { mount } from "@vue/test-utils";
 import ProductCard from "@/components/ProductCard.vue";
 
 describe("ProductCard", () => {
-  it("renderiza correctamente la información del producto", () => {
+  it("renderiza correctamente la informacion del producto", () => {
     const product = {
       id: 1,
       title: "Producto de prueba",
-      description: "Descripción del producto de prueba.",
+      description: "Descripcion del producto de prueba.",
       price: 99.99,
-      category: "Categoría de prueba",
+      category: "Categoria de prueba",
       thumbnail: "https://example.com/producto.jpg",
     };
 
@@ -20,6 +20,9 @@ describe("ProductCard", () => {
         stubs: {
           RouterLink: {
             template: "<a><slot /></a>",
+          },
+          "el-button": {
+            template: "<button><slot /></button>",
           },
         },
       },
