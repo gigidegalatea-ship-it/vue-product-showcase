@@ -263,7 +263,7 @@ Se requiere tener instalado Node.js y npm.
 
 Clonar el repositorio
 
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/gigidegalatea-ship-it/vue-product-showcase.git
 
 Ingresar al proyecto:
 
